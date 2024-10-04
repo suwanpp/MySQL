@@ -10,7 +10,7 @@ SELECT
 -- 2. 전 직원의 평균 급여보다 많은 급여를 받고 있는 직원의 사번, 이름, 직급코드, 급여를 조회하세요.
 SELECT 
        AVG(E.SALARY)
-  FROM EMPLOYEE E;
+  FROM EMPLOYEE E;  -- 전 직원의 평균 급여 
 
 SELECT 
        E.EMP_ID
@@ -59,7 +59,7 @@ SELECT
   FROM EMPLOYEE E
  WHERE E.SALARY IN (SELECT MAX(E2.SALARY)
                       FROM EMPLOYEE E2
-                     GROUP BY E2.DEPT_CODE
+                     GROUP BY E2.DEPT_CODE  -- 부서별 : group by dept_code 부서별로 그룹화
                    );
 
 -- *** 여기서부터 난이도 극상
